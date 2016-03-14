@@ -9,9 +9,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.15.0",
+    "compression": "^1.6.1",
+    "cookie-parser": "^1.4.1",
     "express": "^4.13.4",
     "lodash": "^4.6.1",
+    "morgan": "^1.7.0",
+    "mustache": "^2.2.1",
+    "mustache-express": "^1.2.2",
     "sentiment": "^1.0.6",
+    "serve-favicon": "^2.3.0",
     "twitter": "^1.2.5"
   }
 }
