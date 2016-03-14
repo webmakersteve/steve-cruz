@@ -1,0 +1,20 @@
+{{>layout/head}}
+
+<table class="table table-striped">
+	<tr>
+		<th>Text</th>
+		<th>Sentiment</th>
+	</tr>
+{{#tweets}}
+<tr>
+	<td>
+		{{text}}
+	</td>
+	<td>
+		{{sentiment.score}}
+	</td>
+{{/tweets}}
+</table>
+
+
+{{>layout/foot}}

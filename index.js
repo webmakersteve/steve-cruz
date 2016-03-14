@@ -4,11 +4,19 @@ var morgan = require('morgan');
 var compression = require('compression');
 var cookieParser = require('cookie-parser');
 var favicon = require('serve-favicon');
+var nconf = require('nconf');
 var mustacheExpress = require('mustache-express');
 
 var path = require('path');
 
 var app = express();
+
+nconf.argv()
+	.env();
+
+if (!nconf.get('NODE_ENV') || nconf.get('NODE_ENV') === 'development') {
+	nconf.file({ file: path.join(__dirname, 'config', 'local.json' )});
+}
 
 // app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(express.static(path.join(__dirname, 'public')));
